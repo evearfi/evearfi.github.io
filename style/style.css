@@ -1,0 +1,211 @@
+/* * {
+	cursor: url("../import/cursor1_1.png"), default; 
+} */
+
+
+
+
+/* ----------------------------- FONTS ----------------------------- */
+
+/* lemonmilk */
+@font-face {
+	font-family: 'LEMONm';
+	src: url('../fonts/LEMONMILK_Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LEMONr';
+	src: url('../fonts/LEMONMILK_Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LEMONl';
+	src: url('../fonts/LEMONMILK_Light.ttf') format('truetype');
+}
+/* glacial indifference */
+@font-face {
+	font-family: 'GLACIALb';
+	src: url('../fonts/GlacialIndifference_Bold') format('truetype');
+}
+@font-face {
+	font-family: 'GLACIALi';
+	src: url('../fonts/GlacialIndifference_Italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'GLACIALr';
+	src: url('../fonts/GlacialIndifference_Regular.ttf') format('truetype');
+}
+/* marcellus */
+@font-face {
+	font-family: 'MARCELLUS';
+	src: url('../fonts/Marcellus_Regular.ttf') format('truetype');
+}
+/* monument extended */
+@font-face {
+	font-family: 'MONUMENTr';
+	src: url('../fonts/MonumentExtended_Regular.otf') format('opentype');
+}
+/* lora */
+@font-face {
+	font-family: 'LORAr';
+	src: url('../fonts/Lora_Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LORAi';
+	src: url('../fonts/Lora_Italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LORAm';
+	src: url('../fonts/Lora_Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LORAmi';
+	src: url('../fonts/Lora_Medium Italic.ttf') format('truetype');
+}
+
+
+
+
+/* ---------------------------- BODY ---------------------------- */
+
+body {
+	background-color: #fa6b2b;
+	/* height : 100vh; */
+	width: 100vw;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* --------------------------- A PROPOS --------------------------- */
+
+#divapropos {
+	border: 1px solid green;
+	display: flex;
+	margin: 200px auto;
+	justify-content: center;
+}
+
+#carteID {
+	height: 320px;
+	width: 550px;
+	border: 1px solid #ffe37a;
+	margin-bottom: 10vh;
+	margin-right: 5vh;
+}
+
+#bioapropos {
+	background-color: white;
+	border-radius: 15px;
+	padding: 20px;
+	font-family: 'MARCELLUS';
+	font-size: 1.4em;
+	width: 550px;
+	margin-left: 5vh;
+}
+
+/* ---------------------------- HEADER ---------------------------- */
+
+header {
+	background-color: #fdb044;
+	width: 100vw;
+	height: 100px;
+	position: fixed;
+	position: absolute;
+	top: 0;
+	display: flex;
+	z-index: 100;
+}
+
+.txtheader {
+	font-family: 'LEMONm';
+	font-size: 50px;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke: 1.8px #fa6b2b;
+	margin-top: 23px;
+	display: flex;
+}
+
+#prenomnom {
+	margin-left: 50px;
+}
+
+#apropos {
+	position: absolute;
+	right: 50px;
+}
+
+/* ----------------------------- 2023 ----------------------------- */
+
+hr {
+	width: 91vw;
+	margin-top: 155px;
+	margin-bottom: 20px;
+	border: 1px solid white;
+}
+
+#date2023 {
+	font-family: 'LORAi';
+	font-size: 3.5em;
+	color: white;
+	padding: 10px;
+	background-color: #fa6b2b;
+	position: relative;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+/* ---------------------------- GRILLE ---------------------------- */
+
+#contgrille {
+	width: 62vw;
+	margin: auto;
+}
+
+#grille {
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  	grid-gap: 1.3em;
+  	padding : 20px;	
+} 
+
+.image {
+	height: 220px;
+	border: 1px solid #fa6b2b;
+	margin-bottom: 15px;
+	overflow-y: hidden; /* tt ce qui dépasse est caché */
+	/* display: flex;
+	align-items: center; */
+}
+
+img {
+	max-width: 100%;
+}
+
+article {
+	color: white;
+	background-color: black;
+	grid-column: span 1;
+	border-radius: 15px;
+	padding: 20px;
+	transition: 0.4s ease all;	
+}
+
+article h4 {
+	font-family: 'LEMONm';
+	font-size: 2.2em;	
+	margin-bottom: 0.4em;
+}
+
+article h5 {
+	font-family: 'LEMONl';
+	font-size: 1.4em;	
+	margin-bottom: 1em;
+	color: #ffe37a;
+}
+
+article p {
+	font-family: 'MARCELLUS';
+	font-size: 1.1em;
+}

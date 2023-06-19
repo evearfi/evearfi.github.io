@@ -71,38 +71,62 @@ body {
 	/* height : 100vh; */
 	width: 100vw;
 	max-width: 100%;
-	padding-top: 140px;
+	padding-top: 135px;
 }
 
 a {
 	text-decoration: none;
 }
 
+/* .sup {
+	font-size: 0.6em;
+	position: relative;
+	bottom: 0.6em;
+} */
+
 /* --------------------------- A PROPOS --------------------------- */
 
 #divapropos {
-	border: 1px solid green;
 	display: flex;
-	margin: 200px auto;
+	margin: 13vh auto;
 	justify-content: center;
+	align-items: center;
+	margin-bottom: 170px;
+	min-height: 49.65vh ;
 }
 
 #carteID {
-	height: 320px;
-	width: 550px;
-	border: 1px solid #ffe37a;
-	margin-bottom: 10vh;
+	width: 549px;
 	margin-right: 5vh;
 }
 
 #bioapropos {
-	background-color: white;
+	color: white;
+	background-color: black;
 	border-radius: 15px;
-	padding: 20px;
+	padding: 22px;
 	font-family: 'MARCELLUS';
-	font-size: 1.4em;
-	width: 550px;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	width: 549px;
 	margin-left: 5vh;
+}
+
+#buttonsapropos {
+	margin-left: 5vh;
+	margin-top: 20px;
+	height: 53px;
+}
+
+#buttonmail { 
+	height: 53px;
+	width: 53px;
+	padding-right: 1vh;
+}
+
+#buttoncv {
+	height: 53px;
+	width: 53px;
 }
 
 /* ---------------------------- HEADER ---------------------------- */
@@ -110,7 +134,7 @@ a {
 header {
 	background-color: #fdb044;
 	width: 100vw;
-	height: 100px;
+	height: 92px;
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -119,10 +143,10 @@ header {
 
 .txtheader {
 	font-family: 'LEMONm';
-	font-size: 50px;
+	font-size: 48px;
 	-webkit-text-fill-color: white;
 	-webkit-text-stroke: 1.8px #fa6b2b;
-	margin-top: 23px;
+	margin-top: 21px;
 	display: flex;
 }
 
@@ -135,6 +159,31 @@ header {
 	right: 50px;
 }
 
+/* ---------------------------- FOOTER ---------------------------- */
+
+footer {
+	background-color: black;
+	height: 200px;
+	border-top: 1.7px solid #ffe37a;
+	color: white;
+	margin: auto;
+	text-align: center;
+}
+
+#codepar {
+	margin-top: 67px;
+	font-family: 'LEMONl';
+	color: #ffe37a;
+	font-size: 1em;
+}
+
+#fontsused {
+	font-family: 'LEMONl';
+	color: white;
+	font-size: 0.8em;
+	line-height: normal;
+}
+
 /* ----------------------------- 2023 ----------------------------- */
 
 #trait {
@@ -142,8 +191,7 @@ header {
 	justify-content: center;
 	flex-direction: row;
 	align-items: center;
-	margin-bottom: 20px;
-
+	margin-bottom: 18px;
 	padding: 0 50px;
 }
 
@@ -156,12 +204,12 @@ hr {
 	font-family: 'LORAi';
 	font-size: 3.5em;
 	color: white;
-	padding: 10px;
+	padding: 13px;
 	background-color: #fa6b2b;
 	position: relative;
 	margin: auto;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 4px;
 }
 
 /* ---------------------------- GRILLE ---------------------------- */
@@ -169,6 +217,7 @@ hr {
 #contgrille {
 	width: 62vw;
 	margin: auto;
+	margin-bottom: 80px;
 }
 
 #grille {
@@ -180,15 +229,13 @@ hr {
 
 .image {
 	height: 220px;
-	border: 1px solid #fa6b2b;
 	margin-bottom: 15px;
-	overflow-y: hidden; /* tt ce qui dépasse est caché */
-	/* display: flex;
-	align-items: center; */
+	border-radius: 5px;
+	overflow-y: hidden;
 }
 
 img {
-	max-width: 100%;
+	width: 100%;
 }
 
 article {
@@ -216,4 +263,96 @@ article h5 {
 article p {
 	font-family: 'MARCELLUS';
 	font-size: 1.1em;
+	line-height: 1.2em;
+	padding: 11px;
+	border: 1px dashed #ffe37a;
+	border-radius: 10px;
+}
+
+/* ------------------------ PAGES PROJETS ------------------------ */
+
+#bgprojets {
+	margin: 70px auto;
+	margin-bottom: 120px;
+	color: white;
+	background-color: black;
+	border-radius: 20px;
+	width: 70vw;
+	padding: 40px;
+}
+
+.txtprojets {
+	font-family: 'MARCELLUS';
+	font-size: 1.25em;
+	line-height: 1.2em;
+	padding: 20px;
+	width: 800px;
+	margin: 40px auto;
+}
+
+#photosprojets {
+	width: 60vw;
+	margin: 45px auto;
+	text-align: center
+}
+
+#boxjardin {
+	width: 700px;
+	height: 500px;
+	overflow-x: scroll;
+	margin: auto;
+}
+
+#jardinbottom {
+	margin-bottom: 30px;
+}
+
+.deuximagesunecolonne{
+	display: flex;
+	justify-content: center;
+}
+
+.deuximagesunecolonne figure, .deuxcolonnes figure{
+	position: relative;
+	width: 45%;
+	/* border: 1px solid red; */
+}
+
+.deuximagesunecolonne .imagebas{
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+}
+
+.deuxcolonnes{
+	display: flex;
+	justify-content: center;	
+	margin-top:40px ;
+}
+
+/* ---------------- titres papier ---------------- */
+
+#nomsprojetsphoobj {
+	width: 400px;
+	margin: 25px auto;
+}
+
+#nomsprojetsphstudio {
+	width: 380px;
+	margin: 25px auto;
+}
+
+#nomsprojetsminisite {
+	width: 230px;
+	margin: 25px auto;
+}
+
+#nomsprojetsforjardin {
+	width: 258px;
+	margin: 25px auto;
+}
+
+#nomsprojetsla7e {
+	width: 225px;
+	margin: 25px auto;
 }

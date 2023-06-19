@@ -232,7 +232,20 @@ hr {
 	margin-bottom: 15px;
 	border-radius: 5px;
 	overflow-y: hidden;
-}
+
+	filter: sepia(1);
+	-webkit-filter: sepia(1);
+	}
+
+.image:hover {
+	filter: sepia(0);
+	-webkit-filter: sepia(0);
+	}
+
+.image:active {
+	filter: sepia(0);
+	-webkit-filter: sepia(0);
+	}
 
 img {
 	width: 100%;

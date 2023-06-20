@@ -235,6 +235,7 @@ hr {
 
 	filter: sepia(1);
 	-webkit-filter: sepia(1);
+	transition: filter 0.4s ease-in-out;
 	}
 
 .image:hover {

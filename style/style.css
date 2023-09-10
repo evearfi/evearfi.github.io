@@ -60,18 +60,30 @@
 	font-family: 'LORAmi';
 	src: url('../fonts/Lora_Medium Italic.ttf') format('truetype');
 }
-
-
-
+@font-face {
+	font-family: 'VOLTAIRE';
+	src: url('../fonts/Voltaire_Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'BARLOWr';
+	src: url('../fonts/BarlowCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SOFIAr';
+	src: url('../fonts/SofiaSansCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'SPACEr';
+	src: url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+}
 
 /* ---------------------------- BODY ---------------------------- */
 
 body {
-	background-color: #fa6b2b;
+	background-color: #000000;
 	/* height : 100vh; */
 	width: 100vw;
 	max-width: 100%;
-	padding-top: 135px;
 }
 
 a {
@@ -92,66 +104,65 @@ a {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 170px;
-	min-height: 49.65vh ;
+	min-height: 49vh ;
 }
 
 #carteID {
-	width: 549px;
-	margin-right: 5vh;
+	width: 27vw;
+	margin-right: 6vw;
 }
 
 #bioapropos {
 	color: white;
-	background-color: black;
-	border-radius: 15px;
-	padding: 22px;
 	font-family: 'MARCELLUS';
-	font-size: 1.3em;
+	font-size: 1.26em;
 	line-height: 1.2em;
-	width: 549px;
-	margin-left: 5vh;
+	width: 30vw;
+	margin-left: 6vw;
 }
 
-#buttonsapropos {
-	margin-left: 5vh;
-	margin-top: 20px;
-	height: 53px;
-}
+.mailetcv {
+	font-family: 'MARCELLUS';
+	/* text-transform: uppercase; */
 
-#buttonmail { 
-	height: 53px;
-	width: 53px;
-	padding-right: 1vh;
-}
-
-#buttoncv {
-	height: 53px;
-	width: 53px;
 }
 
 /* ---------------------------- HEADER ---------------------------- */
 
 header {
-	background-color: #fdb044;
+	/* background-color: #fdb044; */
 	width: 100vw;
 	height: 92px;
 	position: fixed;
 	top: 0;
 	display: flex;
 	z-index: 100;
+	border-bottom: 2px solid white;
 }
 
 .txtheader {
-	font-family: 'LEMONm';
-	font-size: 48px;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke: 1.8px #fa6b2b;
-	margin-top: 21px;
+	font-family: 'VOLTAIRE';
+	font-size: 3.1em;
+	color: white;
+	margin-top: 23px;
 	display: flex;
+	text-transform: uppercase;
+}
+
+.txtheader:hover {
+	color: #ffe37a;
+	transition: color 0.3s; 
+	/* faut que le ease out se fasse */
+}
+
+#bgheader {
+	width: 100%;
+	overflow-y: hidden;
 }
 
 #prenomnom {
 	margin-left: 50px;
+	position: absolute;
 }
 
 #apropos {
@@ -163,79 +174,53 @@ header {
 
 footer {
 	background-color: black;
-	height: 200px;
-	border-top: 1.7px solid #ffe37a;
+	height: 20vh;
+	border-top: 2px solid white;
 	color: white;
 	margin: auto;
 	text-align: center;
 }
 
 #codepar {
-	margin-top: 67px;
-	font-family: 'LEMONl';
+	margin-top: 6vh;
+	font-family: 'VOLTAIRE';
 	color: #ffe37a;
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 #fontsused {
 	font-family: 'LEMONl';
 	color: white;
 	font-size: 0.8em;
-	line-height: normal;
+	line-height: 1.6em;
 }
 
-/* ----------------------------- 2023 ----------------------------- */
-
-#trait {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	align-items: center;
-	margin-bottom: 18px;
-	padding: 0 50px;
-}
-
-hr {
-	width: 100%;
-	border: 1px solid white;
-}
-
-#date2023 {
-	font-family: 'LORAi';
-	font-size: 3.5em;
-	color: white;
-	padding: 13px;
-	background-color: #fa6b2b;
-	position: relative;
-	margin: auto;
-	text-align: center;
-	margin-bottom: 4px;
-}
 
 /* ---------------------------- GRILLE ---------------------------- */
 
 #contgrille {
-	width: 62vw;
+	width: 72vw;
 	margin: auto;
-	margin-bottom: 80px;
+	margin-bottom: 6%;
+	padding-top: 8.5%;
 }
 
 #grille {
 	display: grid;
   	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   	grid-gap: 1.3em;
-  	padding : 20px;	
+  	padding : 2%;	
 } 
 
 .image {
 	height: 220px;
 	margin-bottom: 15px;
-	border-radius: 5px;
+	border-radius: 7px;
 	overflow-y: hidden;
-
+	
 	filter: sepia(1);
 	-webkit-filter: sepia(1);
-	transition: filter 0.4s ease-in-out;
+	transition: filter 0.3s ease-in-out;
 	}
 
 .image:hover {
@@ -259,18 +244,25 @@ article {
 	border-radius: 15px;
 	padding: 20px;
 	transition: 0.4s ease all;
+	border: 1px solid white;
+}
+
+article:hover {
+	background-color: #FF631F;
 }
 
 article h4 {
-	font-family: 'LEMONm';
-	font-size: 2.2em;	
-	margin-bottom: 0.4em;
+	font-family: 'VOLTAIRE';
+	text-transform: uppercase;
+	font-size: 2.55em;	
+	margin-bottom: 0.14em;
+	line-height: 1.2em;
 }
 
 article h5 {
 	font-family: 'LEMONl';
-	font-size: 1.4em;	
-	margin-bottom: 1em;
+	font-size: 1.25em;	
+	margin-bottom: 0.8em;
 	color: #ffe37a;
 }
 
@@ -285,30 +277,112 @@ article p {
 
 /* ------------------------ PAGES PROJETS ------------------------ */
 
-#bgprojets {
-	margin: 70px auto;
-	margin-bottom: 120px;
-	color: white;
+
+
+#main {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	max-width: 100%;
+}
+
+h6 {
+	line-height: 1.2em;
+}
+
+.partexplications {  /* GAUCHE */
+	height: 100vh;
 	background-color: black;
-	border-radius: 20px;
-	width: 70vw;
-	padding: 40px;
+	margin: 0;
+	width: 33%;
+	overflow: auto;
+	border-right: 2px solid white;
+}
+
+.titresdeprojets {
+	font-family: 'VOLTAIRE';
+	text-transform: uppercase;
+	color: white;
+	margin: auto;
+	text-align: center;
+	font-size: 3.2em;
+	padding-top: 200px;
+	width: 400px;
 }
 
 .txtprojets {
 	font-family: 'MARCELLUS';
-	font-size: 1.25em;
+	color: white;
+	font-size: 1.26em;
 	line-height: 1.2em;
 	padding: 20px;
-	width: 800px;
+	width: 25vw;
 	margin: 40px auto;
 }
 
-#photosprojets {
-	width: 60vw;
-	margin: 45px auto;
-	text-align: center
+.partshowimages {  /* DROITE */
+	height: 100vh;
+	width: 67%;
+	display: flex;
+	/* border: 2px solid rgb(213, 130, 238); */
+	float: right;
+	margin: 0;
+	overflow: auto;
 }
+
+#photosprojets {
+	margin-top: 10%;
+	display: flex;
+}
+
+#photosprojetsbis {
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.colonneportrait {
+	padding-left: 3%;
+	padding-right: 0.5%;
+	width: 39%;
+	/* border: 2px solid rgb(238, 255, 83); */
+}
+
+.colonnepaysage {
+	padding-right: 3%;
+	padding-left: 0.5%;
+	width: 61%;
+	/* border: 2px solid rgb(95, 233, 243); */
+}
+
+.colonnesimple {
+	padding-right: 3%;
+	padding-left: 3%;
+	width: 100%;
+}
+
+.colonnestriples {
+	display: flex;
+	width: 100%;
+}
+
+.colonnetriple1, .colonnetriple2, .colonnetriple3 {
+	padding-right: 25px;
+	padding-left: 25px;
+	width: 33%;
+}
+
+
+.bandenoire {
+	padding: 4%;
+}
+
+.bandenoirefine {
+	padding: 1%;
+}
+
+
 
 #boxjardin {
 	width: 700px;
@@ -318,10 +392,12 @@ article p {
 }
 
 #jardinbottom {
-	margin-bottom: 30px;
+	margin-bottom: 3%;
 }
 
-.deuximagesunecolonne{
+
+
+/* .deuximagesunecolonne{
 	display: flex;
 	justify-content: center;
 }
@@ -329,7 +405,7 @@ article p {
 .deuximagesunecolonne figure, .deuxcolonnes figure{
 	position: relative;
 	width: 45%;
-	/* border: 1px solid red; */
+	border: 1px solid red;
 }
 
 .deuximagesunecolonne .imagebas{
@@ -342,31 +418,5 @@ article p {
 	display: flex;
 	justify-content: center;	
 	margin-top:40px ;
-}
+} */
 
-/* ---------------- titres papier ---------------- */
-
-#nomsprojetsphoobj {
-	width: 400px;
-	margin: 25px auto;
-}
-
-#nomsprojetsphstudio {
-	width: 380px;
-	margin: 25px auto;
-}
-
-#nomsprojetsminisite {
-	width: 230px;
-	margin: 25px auto;
-}
-
-#nomsprojetsforjardin {
-	width: 258px;
-	margin: 25px auto;
-}
-
-#nomsprojetsla7e {
-	width: 225px;
-	margin: 25px auto;
-}

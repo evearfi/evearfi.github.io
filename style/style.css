@@ -20,45 +20,10 @@
 	font-family: 'LEMONl';
 	src: url('../fonts/LEMONMILK_Light.ttf') format('truetype');
 }
-/* glacial indifference */
-@font-face {
-	font-family: 'GLACIALb';
-	src: url('../fonts/GlacialIndifference_Bold') format('truetype');
-}
-@font-face {
-	font-family: 'GLACIALi';
-	src: url('../fonts/GlacialIndifference_Italic.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'GLACIALr';
-	src: url('../fonts/GlacialIndifference_Regular.ttf') format('truetype');
-}
 /* marcellus */
 @font-face {
 	font-family: 'MARCELLUS';
 	src: url('../fonts/Marcellus_Regular.ttf') format('truetype');
-}
-/* monument extended */
-@font-face {
-	font-family: 'MONUMENTr';
-	src: url('../fonts/MonumentExtended_Regular.otf') format('opentype');
-}
-/* lora */
-@font-face {
-	font-family: 'LORAr';
-	src: url('../fonts/Lora_Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'LORAi';
-	src: url('../fonts/Lora_Italic.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'LORAm';
-	src: url('../fonts/Lora_Medium.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'LORAmi';
-	src: url('../fonts/Lora_Medium Italic.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'VOLTAIRE';
@@ -73,17 +38,25 @@
 	src: url('../fonts/SofiaSansCondensed-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'SPACEr';
-	src: url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+	font-family: 'CABINET';
+	src: url('../fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'GAMBARINO';
+	src: url('../fonts/Gambarino-Regular.otf') format('opentype');
 }
 
 /* ---------------------------- BODY ---------------------------- */
 
 body {
-	background-color: #000000;
+	background-color: white;
 	/* height : 100vh; */
 	width: 100vw;
 	max-width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 a {
@@ -113,8 +86,7 @@ a {
 }
 
 #bioapropos {
-	color: white;
-	font-family: 'MARCELLUS';
+	font-family: 'CABINET';
 	font-size: 1.26em;
 	line-height: 1.2em;
 	width: 30vw;
@@ -122,36 +94,39 @@ a {
 }
 
 .mailetcv {
-	font-family: 'MARCELLUS';
-	/* text-transform: uppercase; */
-
+	font-family: 'CABINET';
+	line-height: 1.2em;
 }
 
 /* ---------------------------- HEADER ---------------------------- */
 
 header {
-	/* background-color: #fdb044; */
+	/* background-color: white; */
 	width: 100vw;
-	height: 92px;
+	height: 60px;
 	position: fixed;
 	top: 0;
 	display: flex;
 	z-index: 100;
-	border-bottom: 2px solid white;
+	border-bottom: 1px solid black;
+
+	-webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .txtheader {
-	font-family: 'VOLTAIRE';
-	font-size: 3.1em;
-	color: white;
-	margin-top: 23px;
+	font-family: 'GAMBARINO', sans-serif;
+	font-size: 1.5em;
+	color: black;
+	margin-top: 18px;
 	display: flex;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
+	transition: color 0.3s;
 }
 
 .txtheader:hover {
-	color: #ffe37a;
-	transition: color 0.3s; 
+	color: #FF631F;
 	/* faut que le ease out se fasse */
 }
 
@@ -170,46 +145,83 @@ header {
 	right: 50px;
 }
 
+
+/* ----------------------------- FILTRES ----------------------------- */
+
+#headBtnsDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 115px;
+}
+
+#headBtnsDiv .headBtn {
+	font-family: 'CABINET', sans-serif;
+	font-size: 1.2em;
+	color: #8f8f8f;
+	background: transparent;
+	border: none;
+	padding: 0 11px;
+	
+	transition: all 0.3s ease-in-out;
+}
+
+#headBtnsDiv .headBtn:hover {
+	color: black;
+	transition: color 0.3s;
+	cursor: pointer;
+}
+
+#headBtnsDiv .headBtn.catSelected {
+	color: #FF631F;
+}
+
+.hiddenPrev {
+	display: none;
+}
+
 /* ---------------------------- FOOTER ---------------------------- */
 
 footer {
-	background-color: black;
-	height: 20vh;
-	border-top: 2px solid white;
+	height: 15vh;
+	width: 100%;
+	border-top: 1px solid black;
 	color: white;
-	margin: auto;
+	margin: 0;
 	text-align: center;
 }
 
 #codepar {
-	margin-top: 6vh;
-	font-family: 'VOLTAIRE';
-	color: #ffe37a;
-	font-size: 1.1em;
+	margin-top: 5vh;
+	font-family: 'CABINET';
+	color: #FF631F;
+	font-size: 1em;
 }
 
 #fontsused {
-	font-family: 'LEMONl';
-	color: white;
-	font-size: 0.8em;
-	line-height: 1.6em;
+	font-family: 'CABINET';
+	color: #8f8f8f;
+	font-size: 1em;
+	line-height: 1.1em;
 }
 
 
 /* ---------------------------- GRILLE ---------------------------- */
 
 #contgrille {
-	width: 72vw;
+	width: 80vw;
 	margin: auto;
 	margin-bottom: 6%;
-	padding-top: 8.5%;
+	padding-top: 55px;
 }
 
 #grille {
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  	grid-gap: 1.3em;
-  	padding : 2%;	
+  	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  	grid-gap: 2em;
+  	/* padding : 2%; */
 } 
 
 .image {
@@ -238,13 +250,13 @@ img {
 }
 
 article {
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: white;
 	grid-column: span 1;
-	border-radius: 15px;
-	padding: 20px;
+	border-radius: 12px;
+	padding: 5px;
 	transition: 0.4s ease all;
-	border: 1px solid white;
+	border: 1px solid black;
 }
 
 article:hover {
@@ -252,26 +264,27 @@ article:hover {
 }
 
 article h4 {
-	font-family: 'VOLTAIRE';
-	text-transform: uppercase;
-	font-size: 2.55em;	
+	font-family: 'GAMBARINO';
+	/* text-transform: uppercase; */
+	font-size: 2em;	
 	margin-bottom: 0.14em;
 	line-height: 1.2em;
+	padding: 0px 11px 0px 11px;
 }
 
-article h5 {
+/* article h5 {
 	font-family: 'LEMONl';
-	font-size: 1.25em;	
+	font-size: 1em;	
 	margin-bottom: 0.8em;
-	color: #ffe37a;
-}
+	color: #FF631F;
+} */
 
 article p {
-	font-family: 'MARCELLUS';
+	font-family: 'CABINET';
 	font-size: 1.1em;
 	line-height: 1.2em;
 	padding: 11px;
-	border: 1px dashed #ffe37a;
+	/* border: 1px dashed #FF631F; */
 	border-radius: 10px;
 }
 
@@ -292,7 +305,7 @@ h6 {
 
 .partexplications {  /* GAUCHE */
 	height: 100vh;
-	background-color: black;
+	background-color: white;
 	margin: 0;
 	width: 33%;
 	overflow: auto;
@@ -300,19 +313,19 @@ h6 {
 }
 
 .titresdeprojets {
-	font-family: 'VOLTAIRE';
-	text-transform: uppercase;
-	color: white;
+	font-family: 'GAMBARINO';
+	/* text-transform: uppercase; */
+	color: black;
 	margin: auto;
 	text-align: center;
-	font-size: 3.2em;
+	font-size: 2em;	
 	padding-top: 200px;
 	width: 400px;
 }
 
 .txtprojets {
-	font-family: 'MARCELLUS';
-	color: white;
+	font-family: 'CABINET';
+	color: black;
 	font-size: 1.26em;
 	line-height: 1.2em;
 	padding: 20px;

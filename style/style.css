@@ -63,17 +63,17 @@ a {
 	text-decoration: none;
 }
 
-/* .sup {
+.sup {
 	font-size: 0.6em;
 	position: relative;
 	bottom: 0.6em;
-} */
+}
 
 /* --------------------------- A PROPOS --------------------------- */
 
 #divapropos {
-	display: flex;
-	margin: 13vh auto;
+	/* display: flex; */
+	margin: 15vh auto;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 170px;
@@ -81,16 +81,16 @@ a {
 }
 
 #carteID {
-	width: 27vw;
-	margin-right: 6vw;
+	width: 45vw;
+	margin: auto;
 }
 
 #bioapropos {
 	font-family: 'CABINET';
 	font-size: 1.26em;
 	line-height: 1.2em;
-	width: 30vw;
-	margin-left: 6vw;
+	width: 50vw;
+	margin-top: 5vw;
 }
 
 .mailetcv {
@@ -98,15 +98,24 @@ a {
 	line-height: 1.2em;
 }
 
+#cfm {
+	width: 110px;
+	margin-top: -60px;
+	margin-left: 290px;
+}
+
+
+
 /* ---------------------------- HEADER ---------------------------- */
 
 header {
-	/* background-color: white; */
 	width: 100vw;
 	height: 60px;
 	position: fixed;
 	top: 0;
 	display: flex;
+	justify-content: space-between;
+	align-items: centers;
 	z-index: 100;
 	border-bottom: 1px solid black;
 
@@ -115,35 +124,49 @@ header {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+header a {
+	display: flex;
+	align-items: center;
+}
+
 .txtheader {
 	font-family: 'GAMBARINO', sans-serif;
 	font-size: 1.5em;
 	color: black;
-	margin-top: 18px;
-	display: flex;
 	/* text-transform: uppercase; */
 	transition: color 0.3s;
 }
 
 .txtheader:hover {
 	color: #FF631F;
-	/* faut que le ease out se fasse */
-}
-
-#bgheader {
-	width: 100%;
-	overflow-y: hidden;
 }
 
 #prenomnom {
 	margin-left: 50px;
-	position: absolute;
 }
 
 #apropos {
-	position: absolute;
-	right: 50px;
+	margin-right: 50px;
+	font-size: 1.1em;
 }
+
+
+
+
+
+
+
+
+h3 {
+	font-family: 'GAMBARINO', sans-serif;
+	width: 70%;
+	margin: 21vh auto 3vh;
+	text-align: center;
+	font-size: 2em;
+	line-height: 1.3em;
+}
+
+
 
 
 /* ----------------------------- FILTRES ----------------------------- */
@@ -211,16 +234,17 @@ footer {
 /* ---------------------------- GRILLE ---------------------------- */
 
 #contgrille {
-	width: 80vw;
+	width: 85vw;
 	margin: auto;
 	margin-bottom: 6%;
 	padding-top: 55px;
+	display: flex-start;
 }
 
 #grille {
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  	grid-gap: 2em;
+  	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  	grid-gap: 4em;
   	/* padding : 2%; */
 } 
 
@@ -230,20 +254,20 @@ footer {
 	border-radius: 7px;
 	overflow-y: hidden;
 	
-	filter: sepia(1);
+	/* filter: sepia(1);
 	-webkit-filter: sepia(1);
-	transition: filter 0.3s ease-in-out;
+	transition: filter 0.3s ease-in-out; */
 	}
 
-.image:hover {
+/* .image:hover {
 	filter: sepia(0);
 	-webkit-filter: sepia(0);
-	}
+	} */
 
-.image:active {
+/* .image:active {
 	filter: sepia(0);
 	-webkit-filter: sepia(0);
-	}
+	} */
 
 img {
 	width: 100%;
@@ -265,7 +289,6 @@ article:hover {
 
 article h4 {
 	font-family: 'GAMBARINO';
-	/* text-transform: uppercase; */
 	font-size: 2em;	
 	margin-bottom: 0.14em;
 	line-height: 1.2em;
@@ -314,7 +337,6 @@ h6 {
 
 .titresdeprojets {
 	font-family: 'GAMBARINO';
-	/* text-transform: uppercase; */
 	color: black;
 	margin: auto;
 	text-align: center;
@@ -407,6 +429,13 @@ h6 {
 #jardinbottom {
 	margin-bottom: 3%;
 }
+
+
+
+
+
+
+
 
 
 

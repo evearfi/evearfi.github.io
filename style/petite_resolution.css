@@ -1,0 +1,22 @@
+h1 {
+	margin: 15vw auto 2vh;
+	font-family: 'GAMBARINO', sans-serif;
+	font-size: 5vw;
+	text-align: center;
+}
+
+#promo {
+	width: 65vw;
+	text-align: center;
+	margin: auto;
+	font-family: 'CABINET', sans-serif;
+	font-size: 2.5vw;
+	line-height: 3vw;
+	margin-bottom: 8vw;
+}
+
+#magrilletp {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-auto-flow: row;
+}
